@@ -22,18 +22,8 @@ sigma = zeros(1, size(X, 2));
 %               feature and each row is an example. You need 
 %               to perform the normalization separately for 
 %               each feature. 
-%
-% Hint: You might find the 'mean' and 'std' functions useful.
-%       
+  mu = mean(X)
+  sigma = std(X)
 
-
-
-
-
-
-
-
-
-% ============================================================
-
+  X_norm = (X - mu) ./ sigma
 end
