@@ -14,8 +14,8 @@ J_history = zeros(num_iters, 1);
     %
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
-    prediction = X' * ( X * theta -y) / m
-    theta = theta - alpha * prediction;
+    gradient = X' * ( X * theta - y) / m
+    theta = theta - alpha * gradient;
 
     % Save the cost J in every iteration
     J_history(iter) = computeCost(X, y, theta);
