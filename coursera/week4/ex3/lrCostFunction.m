@@ -36,13 +36,13 @@ grad = zeros(size(theta));
 %           grad = grad + YOUR_CODE_HERE (using the temp variable)
 
 prediction = sigmoid(X * theta);
-total = y' * log(prediction) + (1 - y)' * log(1 - prediction)
-temp = theta
-temp(1) = 0
-regularization = lambda / (2 * m) * sum(temp .^ 2)
-J = - total / m + regularization
+total = y' * log(prediction) + (1 - y)' * log(1 - prediction);
+temp = theta;
+temp(1) = 0;
+regularization = lambda / (2 * m) * sum(temp .^ 2);
+J = - total / m + regularization;
 
-grad = X' * (prediction - y) / m + lambda / m * temp
+grad = X' * (prediction - y) / m + lambda / m * temp;
 % =============================================================
 grad = grad(:);
 end

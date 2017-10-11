@@ -50,6 +50,6 @@ X = [ones(m, 1) X];
       % t is the assigned var to store the function
       [theta] = fmincg (@(t)(lrCostFunction(t, X, (y == i), lambda)), initial_theta, options);
       % We get the theta when i is the expected result
-      all_theta(i,:) = theta
+      all_theta(i,:) = theta;
     end;
 end
