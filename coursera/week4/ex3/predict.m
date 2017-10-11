@@ -19,17 +19,18 @@ p = zeros(size(X, 1), 1);
 %       function can also return the index of the max element, for more
 %       information see 'help max'. If your examples are in rows, then, you
 %       can use max(A, [], 2) to obtain the max for each row.
-%
 
+% NOTE: Added bias unit
+X = [ones(m, 1) X];
 
+% Get first node
+a1 = Theta1 * X';
+a1_size = size(a1', 1);
 
+% NOTE: Added bias unit
+a1 = [ones(a1_size, 1) sigmoid(a1')];
 
-
-
-
-
-
-% =========================================================================
-
-
+% Get output layer
+a2 = a1 * Theta2';
+[max, p] = max(a2, [], 2);
 end

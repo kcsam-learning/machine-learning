@@ -5,7 +5,7 @@
 %
 %  This file contains code that helps you get started on the
 %  linear exercise. You will need to complete the following functions
-%  in this exericse:
+%  in this exercise:
 %
 %     lrCostFunction.m (logistic regression cost function)
 %     oneVsAll.m
@@ -85,4 +85,3 @@ pause;
 pred = predictOneVsAll(all_theta, X);
 
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
-
